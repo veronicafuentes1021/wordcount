@@ -29,6 +29,7 @@ __author__ = "Veronica Fuentes"
 
 import sys
 
+
 def create_word_dict(filename):
     my_dict = {}
     with open(filename) as text:
