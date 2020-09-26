@@ -54,9 +54,13 @@ def print_words(filename):
 
 
 def print_top(filename):
-    """Prints the top count listing for the given file."""
-    # Your code here
-    return
+    the_dict = create_word_dict(filename)
+    sort_count = sorted(the_dict.items(), key=lambda v: v[1], reverse=True)
+    for i in range(20):
+        if i >= len(sort_count):
+            break
+        word, count = sort_count[i]
+        print(word, ":", count)
 
 
 # This basic command line argument parsing code is provided and calls
